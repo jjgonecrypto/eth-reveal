@@ -2,14 +2,15 @@
 	"name": "eth-reveal",
 	"version": "1.0.0",
 	"description": "Dig into Ethereum transactions and reveal their secrets",
-	"main": "index.js",
+	"main": "reveal.js",
 	"dependencies": {
 		"axios": "0.18.0",
 		"chalk": "2.4.2",
 		"commander": "2.20.0",
 		"dotenv-safe": "6.1.0",
 		"ethers": "4.0.27",
-		"numbro": "2.1.2"
+		"numbro": "2.1.2",
+		"pretty-error": "2.1.1"
 	},
 	"devDependencies": {
 		"eslint": "5.16.0",
