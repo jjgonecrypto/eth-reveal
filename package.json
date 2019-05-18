@@ -1,0 +1,26 @@
+{
+  "name": "eth-reveal",
+  "version": "1.0.0",
+  "description": "Dig into Ethereum transactions and reveal their secrets",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinjmoses/eth-reveal.git"
+  },
+  "keywords": [
+    "ethereum",
+    "revert",
+    "transactions"
+  ],
+  "author": "justin j. moses",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinjmoses/eth-reveal/issues"
+  },
+  "homepage": "https://github.com/justinjmoses/eth-reveal#readme"
+}
