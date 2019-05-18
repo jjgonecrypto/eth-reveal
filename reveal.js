@@ -20,7 +20,11 @@ if (require.main === module) {
 
 		const { gasUsed, status, errorMessage, revertReason } = await lookup({ hash: program.hash });
 
-		console.log(gray(`Gas used: ${numbro(gasUsed).format('0,0')}`));
+		console.log(
+			gray(
+				`Gas used: ${numbro(gasUsed).format({ average: true })} (${numbro(gasUsed).format('0,0')})`
+			)
+		);
 		console.log(gray('Status:'), status > 0 ? green('success') : red('failure'));
 
 		if (errorMessage) {
