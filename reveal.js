@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 
+const { formatEther } = require('ethers').utils;
 const program = require('commander');
 const numbro = require('numbro');
+const util = require('util');
 const { gray, red, yellow, green, cyan } = require('chalk');
 const { lookup } = require('./lib');
 
@@ -16,9 +18,45 @@ if (require.main === module) {
 			.parse(process.argv);
 
 		const { hash } = program;
-		console.log(gray('tx hash:', `https://etherscan.io/tx/${hash}`));
+		console.log(gray('txn:', `https://etherscan.io/tx/${hash}`));
 
-		const { gasUsed, status, errorMessage, revertReason } = await lookup({ hash: program.hash });
+		const {
+			from,
+			contract,
+			method,
+			decodedLogs,
+			gasUsed,
+			status,
+			errorMessage,
+			revertReason,
+			value,
+		} = await lookup({
+			hash: program.hash,
+		});
+
+		console.log(gray('from:', from));
+		if (contract) console.log(gray('contract:', contract));
+		if (method)
+			console.log(
+				'method:',
+				util.inspect(method, {
+					showHidden: true,
+					depth: null,
+				})
+			);
+
+		if (decodedLogs && decodedLogs.length)
+			console.log(
+				gray(
+					'logs:',
+					util.inspect(decodedLogs, {
+						showHidden: true,
+						depth: null,
+					})
+				)
+			);
+
+		if (Number(formatEther(value)) > 0) console.log(gray('value:', formatEther(value), 'ETH'));
 
 		console.log(
 			gray(

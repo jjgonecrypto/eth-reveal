@@ -1,12 +1,13 @@
 module.exports = {
+	extends: ['eslint:recommended', 'plugin:import/errors'],
 	env: {
-		es6: true,
-		jest: true,
 		node: true,
 	},
-	extends: 'eslint:recommended',
 	parserOptions: {
 		ecmaVersion: 2017,
+	},
+	settings: {
+		'import/resolver': 'node',
 	},
 	rules: {
 		'no-console': 'off',
