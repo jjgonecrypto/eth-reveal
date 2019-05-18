@@ -1,5 +1,8 @@
 # Eth-Reveal
 
+[![CircleCI](https://circleci.com/gh/justinjmoses/eth-reveal.svg?style=svg)](https://circleci.com/gh/justinjmoses/eth-reveal)
+[![npm version](https://badge.fury.io/js/eth-reveal.svg)](https://badge.fury.io/js/eth-reveal)
+
 Usage:
 
 `npx eth-reveal -h [hash]`
