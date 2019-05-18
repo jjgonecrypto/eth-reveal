@@ -21,6 +21,7 @@ if (require.main === module) {
 		console.log(gray('txn:', `https://etherscan.io/tx/${hash}`));
 
 		const {
+			to,
 			from,
 			contract,
 			method,
@@ -35,14 +36,18 @@ if (require.main === module) {
 		});
 
 		console.log(gray('from:', from));
+		console.log(gray('to:', to));
+
 		if (contract) console.log(gray('contract:', contract));
+
 		if (method)
 			console.log(
-				'method:',
-				util.inspect(method, {
-					showHidden: true,
-					depth: null,
-				})
+				gray(
+					'method:',
+					typeof method === 'string'
+						? method
+						: util.inspect(method, { showHidden: true, depth: null })
+				)
 			);
 
 		if (decodedLogs && decodedLogs.length)
