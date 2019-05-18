@@ -1,6 +1,6 @@
 {
 	"name": "eth-reveal",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Dig into Ethereum transactions and reveal their secrets",
 	"main": "reveal.js",
 	"dependencies": {
