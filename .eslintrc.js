@@ -1,14 +1,6 @@
 module.exports = {
-	extends: ['eslint:recommended', 'plugin:import/errors'],
-	env: {
-		node: true,
-	},
-	parserOptions: {
-		ecmaVersion: 2017,
-	},
-	settings: {
-		'import/resolver': 'node',
-	},
+	extends: ['eslint:recommended', 'plugin:node/recommended'],
+
 	rules: {
 		'no-console': 'off',
 		indent: ['error', 'tab'],

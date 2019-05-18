@@ -1,6 +1,6 @@
 {
 	"name": "eth-reveal",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "Dig into Ethereum transactions and reveal their secrets",
 	"main": "reveal.js",
 	"dependencies": {
@@ -16,15 +16,20 @@
 	"devDependencies": {
 		"eslint": "5.16.0",
 		"eslint-config-prettier": "4.3.0",
-		"eslint-import-resolver-node": "0.3.2",
-		"eslint-plugin-import": "2.17.2",
+		"eslint-plugin-node": "9.0.1",
 		"eslint-plugin-prettier": "3.1.0",
 		"prettier": "1.17.1"
+	},
+	"engines": {
+		"node": ">=8.10.0"
 	},
 	"scripts": {
 		"lint": "eslint .",
 		"format": "prettier --write \"*.js\"",
 		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"bin": {
+		"reveal": "reveal.js"
 	},
 	"repository": {
 		"type": "git",
