@@ -3,7 +3,36 @@
 [![CircleCI](https://circleci.com/gh/justinjmoses/eth-reveal.svg?style=svg)](https://circleci.com/gh/justinjmoses/eth-reveal)
 [![npm version](https://badge.fury.io/js/eth-reveal.svg)](https://badge.fury.io/js/eth-reveal)
 
-Usage:
+Dive into Ethereum transactions from the CLI or via a module.
+
+## Features
+
+- Decodes methods, parmas and logs (with formatted dates and numbers) using ABI from Etherscan (if any)
+- Looks for `target` of contract if any (i.e. a `Proxy`) and adds that ABI as well
+- Shows errors and revert reasons
+
+## API
+
+```javascript
+const reveal = require('eth-reveal');
+
+(async () => {
+	const {
+		to,
+		from,
+		contract,
+		method,
+		decodedLogs,
+		gasUsed,
+		status,
+		errorMessage,
+		revertReason,
+		value,
+	} = await reveal({ hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8' });
+})();
+```
+
+## CLI Usage:
 
 `npx eth-reveal -h [hash]`
 
