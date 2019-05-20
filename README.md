@@ -13,7 +13,34 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 - Looks for `target` of contract if any (i.e. a `Proxy`) and adds that ABI as well
 - Shows errors and revert reasons
 
-## API
+## Browser API
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/eth-reveal/dist/main.js"></script>
+<script>
+	// assumes browser supports modern JS (can use Babel preprocesser for this, see settings in Codepen linked above)
+	(async () => {
+		const { reveal } = window;
+		const {
+			to,
+			from,
+			contract,
+			method,
+			decodedLogs,
+			gasUsed,
+			status,
+			errorMessage,
+			revertReason,
+			value,
+		} = await reveal({
+			hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8',
+			etherscanKey: 'demo', // optionally for better ES performance
+		});
+	})();
+</script>
+```
+
+## Node API
 
 ```javascript
 const reveal = require('eth-reveal');
@@ -30,7 +57,10 @@ const reveal = require('eth-reveal');
 		errorMessage,
 		revertReason,
 		value,
-	} = await reveal({ hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8' });
+	} = await reveal({
+		hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8',
+		etherscanKey: process.env.ETHERSCAN_API_KEY, // optionally for better ES performance
+	});
 })();
 ```
 
