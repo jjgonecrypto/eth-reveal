@@ -29,7 +29,7 @@
 	"scripts": {
 		"lint": "eslint .",
 		"format": "prettier --write \"*.js\"",
-		"prepublish": "webpack",
+		"prepare": "webpack",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
