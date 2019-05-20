@@ -6,7 +6,7 @@ const program = require('commander');
 const numbro = require('numbro');
 const util = require('util');
 const { gray, red, yellow, green, cyan } = require('chalk');
-const { lookup } = require('./lib');
+const lookup = require('./lib/lookup');
 
 // perform as CLI tool if args given
 if (require.main === module) {

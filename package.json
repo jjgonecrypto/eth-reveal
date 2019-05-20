@@ -3,6 +3,7 @@
 	"version": "0.3.0",
 	"description": "Dig into Ethereum transactions and reveal their secrets",
 	"main": "reveal.js",
+	"browser": "dist/main.js",
 	"dependencies": {
 		"abi-decoder": "1.2.0",
 		"axios": "0.18.0",
@@ -18,7 +19,9 @@
 		"eslint-config-prettier": "4.3.0",
 		"eslint-plugin-node": "9.0.1",
 		"eslint-plugin-prettier": "3.1.0",
-		"prettier": "1.17.1"
+		"prettier": "1.17.1",
+		"webpack": "4.32.0",
+		"webpack-cli": "3.3.2"
 	},
 	"engines": {
 		"node": ">=8.10.0"
@@ -26,6 +29,7 @@
 	"scripts": {
 		"lint": "eslint .",
 		"format": "prettier --write \"*.js\"",
+		"prepublish": "webpack",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
