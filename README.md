@@ -5,6 +5,8 @@
 
 Dive into Ethereum transactions from the CLI or via a module.
 
+Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
+
 ## Features
 
 - Decodes methods, parmas and logs (with formatted dates and numbers) using ABI from Etherscan (if any)
