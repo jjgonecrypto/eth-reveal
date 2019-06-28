@@ -15,7 +15,7 @@ if (require.main === module) {
 
 		program
 			.option('-h, --hash <value>', 'Transaction hash (include 0x prefix)')
-			.option('-a, --abiContract [value]', 'Alternative contract that would have the ABI')
+			.option('-a, --`abiContract` [value]', 'Alternative contract that would have the ABI')
 			.parse(process.argv);
 
 		const { hash } = program;

@@ -27,6 +27,8 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 			contract,
 			method,
 			decodedLogs,
+			gasPrice,
+			gasLimit,
 			gasUsed,
 			status,
 			errorMessage,
