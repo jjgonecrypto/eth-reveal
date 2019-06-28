@@ -29,7 +29,7 @@
 	"scripts": {
 		"lint": "eslint .",
 		"format": "prettier --write \"*.js\"",
-		"prepare": "webpack && git commit -am\"Bundling for dist\"",
+		"prepare": "webpack && (git commit -am\"Bundling for dist\" || true)",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
