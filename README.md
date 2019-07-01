@@ -22,9 +22,14 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 	(async () => {
 		const { reveal } = window;
 		const {
+			hash,
+			blockNumber,
+			timestamp,
 			to,
 			from,
+			isContract,
 			contract,
+			underlyingContract,
 			method,
 			decodedLogs,
 			gasPrice,
@@ -35,6 +40,7 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 			errorMessage,
 			revertReason,
 			value,
+			nonce,
 		} = await reveal({
 			hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8',
 			etherscanKey: 'demo', // optionally for better ES performance
@@ -50,16 +56,25 @@ const reveal = require('eth-reveal');
 
 (async () => {
 	const {
+		hash,
+		blockNumber,
+		timestamp,
 		to,
 		from,
+		isContract,
 		contract,
+		underlyingContract,
 		method,
 		decodedLogs,
+		gasPrice,
+		gasLimit,
 		gasUsed,
+		gasFormat, // handy format of gas price, limit and used params
 		status,
 		errorMessage,
 		revertReason,
 		value,
+		nonce,
 	} = await reveal({
 		hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8',
 		etherscanKey: process.env.ETHERSCAN_API_KEY, // optionally for better ES performance
