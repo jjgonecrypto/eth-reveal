@@ -30,6 +30,7 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 			gasPrice,
 			gasLimit,
 			gasUsed,
+			gasFormat, // handy format of gas price, limit and used params
 			status,
 			errorMessage,
 			revertReason,
