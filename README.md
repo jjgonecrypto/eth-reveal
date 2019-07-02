@@ -43,6 +43,7 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 			nonce,
 		} = await reveal({
 			hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8',
+			network: 'mainnet', // default (supports kovan, ropsten and rinkeby)
 			etherscanKey: 'demo', // optionally for better ES performance
 		});
 	})();
@@ -77,6 +78,7 @@ const reveal = require('eth-reveal');
 		nonce,
 	} = await reveal({
 		hash: '0x92031f1cafad71bdfaa2d326b222972df2c2dcdc2931b5e8c1a32bda2dc7b2c8',
+		network: 'mainnet', // default (supports kovan, ropsten and rinkeby)
 		etherscanKey: process.env.ETHERSCAN_API_KEY, // optionally for better ES performance
 	});
 })();
