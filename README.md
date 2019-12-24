@@ -9,7 +9,7 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 
 ## Features
 
-- Decodes methods, parmas and logs (with formatted dates and numbers) using ABI from Etherscan (if any)
+- Decodes method calls, function parameters and logs (with formatted dates and numbers) using ABI from Etherscan (if any)
 - Looks for `target` of contract if any (i.e. a `Proxy`) and adds that ABI as well
 - Shows errors and revert reasons
 
