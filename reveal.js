@@ -36,6 +36,7 @@ if (require.main === module) {
 		} = await lookup({
 			hash,
 			network,
+			etherscanKey: 'YECX97I2B65BBPB6Z11YBVE9SSCUS2QIAU', // default Etherscan API key
 		});
 
 		console.log(gray('from:', from));
