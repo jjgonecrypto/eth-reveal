@@ -16,7 +16,7 @@ Use it live in Codepen: https://codepen.io/justinjmoses/full/vwexLj
 ## Browser API
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/eth-reveal/dist/main.js"></script>
+<script src="//cdn.jsdelivr.net/npm/eth-reveal/browser.js"></script>
 <script>
 	// assumes browser supports modern JS (can use Babel preprocesser for this, see settings in Codepen linked above)
 	(async () => {
