@@ -1,6 +1,5 @@
 module.exports = {
 	extends: ['eslint:recommended', 'plugin:node/recommended'],
-
 	rules: {
 		'no-console': 'off',
 		indent: ['error', 'tab'],

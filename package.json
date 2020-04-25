@@ -3,7 +3,7 @@
 	"version": "0.5.12",
 	"description": "Dig into Ethereum transactions and reveal their secrets",
 	"main": "reveal.js",
-	"browser": "dist/main.js",
+	"browser": "browser.js",
 	"dependencies": {
 		"abi-decoder": "1.2.0",
 		"axios": "0.19.0",
@@ -29,7 +29,8 @@
 	"scripts": {
 		"lint": "eslint .",
 		"format": "prettier --write \"*.js\"",
-		"prepare": "webpack && (git commit -am\"Bundling for dist\" || true)",
+		"pack": "webpack --mode production",
+		"prepublish": "npm run pack",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {

@@ -60,3 +60,6 @@ typings/
 # next.js build output
 .next
 .DS_Store
+
+# this is auto-generated on pre-publish, no need to commit
+browser.js
