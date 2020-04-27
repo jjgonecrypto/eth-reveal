@@ -8,6 +8,8 @@ const util = require('util');
 const { gray, red, yellow, green, cyan } = require('chalk');
 const lookup = require('./lib/lookup');
 
+require('dotenv-safe').config();
+
 // perform as CLI tool if args given
 if (require.main === module) {
 	(async () => {
@@ -25,6 +27,8 @@ if (require.main === module) {
 		const {
 			to,
 			from,
+			blockNumber,
+			timestamp,
 			contract,
 			method,
 			decodedLogs,
@@ -36,11 +40,15 @@ if (require.main === module) {
 		} = await lookup({
 			hash,
 			network,
-			etherscanKey: 'YECX97I2B65BBPB6Z11YBVE9SSCUS2QIAU', // default Etherscan API key
+			etherscanKey: process.env.ETHERSCAN_API_KEY,
+			providerURI: process.env.PROVIDER_URI,
+			infuraProjectID: process.env.INFURA_PROJECT_ID,
 		});
 
 		console.log(gray('from:', from));
 		console.log(gray('to:', to));
+		console.log(gray('block:', blockNumber));
+		console.log(gray('date:', new Date(timestamp * 1000)));
 
 		if (contract) console.log(gray('contract:', contract));
 

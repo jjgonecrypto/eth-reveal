@@ -10,7 +10,7 @@
 		"chalk": "2.4.2",
 		"commander": "2.20.0",
 		"dotenv-safe": "6.1.0",
-		"ethers": "4.0.44",
+		"ethers": "4.0.47",
 		"numbro": "2.1.2",
 		"pretty-error": "2.1.1"
 	},
