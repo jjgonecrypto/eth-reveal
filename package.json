@@ -6,7 +6,7 @@
 	"browser": "browser.js",
 	"dependencies": {
 		"abi-decoder": "2.3.0",
-		"axios": "0.19.2",
+		"axios": "0.21.1",
 		"chalk": "2.4.2",
 		"commander": "2.20.0",
 		"dotenv-safe": "6.1.0",
